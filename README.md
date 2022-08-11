@@ -5,4 +5,5 @@ Frist of all, to find the prompts which elicit the pre-trained model better, we 
 
 Then, search the best threshold for each realtion.
 
-
+run pipeline.py to generate the predicted results.
+python pipeline.py -i data/test.jsonl -o data/prediction.jsonl
