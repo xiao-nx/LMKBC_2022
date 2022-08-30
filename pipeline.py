@@ -146,19 +146,30 @@ def run(args):
     
     df = pd.DataFrame(input_rows)
     relations = df.Relation.value_counts().keys()
-    relation_threshold_dic = {'ChemicalCompoundElement': 0.07,
-                                'CompanyParentOrganization': 0.60,
-                                'CountryBordersWithCountry': 0.10,
-                                'CountryOfficialLanguage': 0.20,
-                                'PersonCauseOfDeath': 0.95,
-                                'PersonEmployer': 0.01,
-                                'PersonInstrument': 0.28,
-                                'PersonLanguage': 0.30,
-                                'PersonPlaceOfDeath': 0.45,
-                              'PersonProfession': 0.010, #0.045
-                              'RiverBasinsCountry': 0.150,
-                              'StateSharesBorderState': 0.050}    
-    
+#     relation_threshold_dic = {'ChemicalCompoundElement': 0.07,
+#                                 'CompanyParentOrganization': 0.60,
+#                                 'CountryBordersWithCountry': 0.10,
+#                                 'CountryOfficialLanguage': 0.20,
+#                                 'PersonCauseOfDeath': 0.95,
+#                                 'PersonEmployer': 0.01,
+#                                 'PersonInstrument': 0.28,
+#                                 'PersonLanguage': 0.30,
+#                                 'PersonPlaceOfDeath': 0.45,
+#                               'PersonProfession': 0.010, #0.045
+#                               'RiverBasinsCountry': 0.150,
+#                               'StateSharesBorderState': 0.050}    
+    relation_threshold_dic = {'PersonEmployer': 0.06,
+                             'PersonProfession': 0.01,
+                             'PersonInstrument': 0.29,
+                             'StateSharesBorderState': 0.04,
+                             'ChemicalCompoundElement': 0.04,
+                             'CountryOfficialLanguage': 0.36,
+                             'PersonCauseOfDeath': 0.92,
+                             'RiverBasinsCountry': 0.15,
+                             'PersonLanguage': 0.29,
+                             'CompanyParentOrganization': 0.54,
+                             'CountryBordersWithCountry': 0.1,
+                             'PersonPlaceOfDeath': 0.35}      
 
     # Create prompts
     logger.info(f"Creating prompts...")
